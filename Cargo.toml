@@ -1,0 +1,26 @@
+[workspace]
+members = ["codegen"]
+
+[package]
+name = "playwright"
+version = "0.1.0"
+edition = "2021"
+description = "Rust bindings for Microsoft Playwright browser automation"
+license = "MIT"
+repository = "https://github.com/miloira/playwright-rs"
+readme = "README.md"
+keywords = ["playwright", "browser", "automation", "testing", "chromium"]
+categories = ["api-bindings", "web-programming"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+tracing = "0.1"
+futures = "0.3"
+base64 = "0.22"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "macros", "rt-multi-thread"] }
+tracing-subscriber = "0.3"
